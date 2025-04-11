@@ -70,6 +70,9 @@ history = model.fit(
     validation_split=0.1
 )
 
+#salva o modelo
+model.save("TRAINED_MODEL.keras")
+
 # Avalia o modelo com os dados de teste
 test_loss, test_accuracy = model.evaluate(x_test, y_test)
 print("Test accuracy:", test_accuracy)
